@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
+  const myImageStyle = { width: 150, height: 150 }
+
   return (
     <AppBar position="static">
       <Toolbar
@@ -17,7 +19,7 @@ const Navbar = () => {
           padding: "40px 0"
         }}
       >
-        <img src="./images/logo-white.png" className="logo" />
+        <img src="./images/logo-white.png" className="logo" style={ myImageStyle } alt="restaurant Logo" />
 
         <Stack direction={"row"} spacing={2} sx={{
           display: {xs: "none", lg: "block"}
