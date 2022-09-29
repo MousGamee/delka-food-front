@@ -1,37 +1,41 @@
-
-import LogoDevIcon from '@mui/icons-material/LogoDev';
-import { AppBar, Box, IconButton, Toolbar, Typography, } from '@mui/material';
-import { Stack } from '@mui/system';
-import { Link } from 'react-router-dom';
+import LogoDevIcon from "@mui/icons-material/LogoDev";
+import { AppBar, Box, IconButton, Toolbar, Typography, Button } from "@mui/material";
+import { Stack } from "@mui/system";
+import { Link } from "react-router-dom";
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
-    return (
-        <AppBar position="static">
-            <Toolbar variant='regular' sx={{
-                backgroundColor: '#8e4e4E',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-            }}>
-                <Stack direction={'row'} spacing={1} sx={{
-                    alignItems: 'center'
-                }}>
-                    <Box sx={{
-                        height: 50,
-                        objectFit: 'contain'
-                    }}>
-                        <img src='./images/logo-white.png' className='logo' />
-                    </Box>
-                    <Typography variant='h5' component={'h1'}>Mon site</Typography>
-                </Stack>
-                <Stack direction={'row'} spacing={2}>
-                    <Link>Acceuil</Link>
-                    <Link>Acceuil</Link>
-                    <Link>Acceuil</Link>
-                </Stack>
+  return (
+    <AppBar position="static">
+      <Toolbar
+        variant="regular"
+        sx={{
+          backgroundColor: "#A1C298",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexDirection: {xs: "row", lg:"column"},
+          padding: "40px 0"
+        }}
+      >
+        <img src="./images/logo-white.png" className="logo" />
 
-            </Toolbar>
-        </AppBar>
-    )
-}
+        <Stack direction={"row"} spacing={2} sx={{
+          display: {xs: "none", lg: "block"}
+        }} >
+          <Link>Acceuil</Link>
+          <Link>Notre cartes</Link>
+          <Link>Blog</Link>
+          <Link>A prospos</Link>
+          <Link>Contact</Link>
+        </Stack>
+        <Button variant="text" sx={{
+          display: {xs: "block", lg: "none"}
+        }}>
+          <MenuIcon/>
+        </Button>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
-export default Navbar
+export default Navbar;
