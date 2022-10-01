@@ -1,5 +1,7 @@
 import COLORS from './Colors'
+import SIZES from './Sizes'
 
-export default {
-    COLORS
+export {
+    COLORS,
+    SIZES
 }
