@@ -10,7 +10,7 @@ const Navbar = () => {
             <Toolbar
                 variant="regular"
                 sx={{
-                    backgroundColor: "#A1C298",
+                    backgroundColor: "#e5fae1",
                     justifyContent: "space-between",
                     alignItems: "center",
                     flexDirection: { xs: "row", lg: "column" },
